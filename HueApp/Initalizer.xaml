@@ -1,0 +1,83 @@
+<!--
+Copyright (c) Microsoft Corporation.  All rights reserved.
+The MIT License (MIT)
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+
+<Grid Background="#464646"
+    x:Class="HueApp.Initalizer" 
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+
+    <Grid.RowDefinitions>
+        <RowDefinition/>
+        <RowDefinition Height="125"/>
+    </Grid.RowDefinitions>
+    
+    <Canvas Grid.Row="0" Grid.RowSpan="2" x:Name="SplashCanvas"  Background="White">
+        <Image x:Name="extendedSplashImage" Source="Assets/splash.png"/>
+    </Canvas>
+
+    <ProgressRing Grid.Row="1" Name="SplashProgressRing" IsActive="True" Width="20" Height="20" Foreground="Black"></ProgressRing>
+
+    <ContentDialog x:Name="BridgeEntryPopup"
+                        VerticalAlignment="Stretch"
+                        Title="Find bridge"
+                        PrimaryButtonText="Okay"
+                        IsPrimaryButtonEnabled="{Binding IsChecked, ElementName=checkBoxAgree, Mode=OneWay}">
+        <StackPanel>
+            <TextBlock x:Name="BridgEntryText" Text="Sorry, but we couldn't automatically find your bridge. Try manually entering its IP address."
+                            TextWrapping="Wrap" />
+            <TextBox x:Name="BridgEntryIp" Header="Bridge IP" Margin="0,10,0,0"></TextBox>
+        </StackPanel>
+    </ContentDialog>
+
+    <ContentDialog x:Name="RetryBridgeSearchPopup"
+                        VerticalAlignment="Stretch"
+                        Title="Find bridge"
+                        PrimaryButtonText="Okay"
+                        IsPrimaryButtonEnabled="{Binding IsChecked, ElementName=checkBoxAgree, Mode=OneWay}">
+        <StackPanel>
+            <TextBlock x:Name="RetryBridgeSearchText" Text="We're having trouble automatically finding your bridge. Make sure it's powered on, has 3 blue lights illuminated, on the same network as this device, and that you're connected to the Internet. Then press 'Okay' and we'll try again." TextWrapping="Wrap" />
+        </StackPanel>
+    </ContentDialog>
+    
+    <ContentDialog x:Name="ErrorPopup"
+                        VerticalAlignment="Stretch"
+                        Title="Uh oh"
+                        PrimaryButtonText="Okay"
+                        IsPrimaryButtonEnabled="{Binding IsChecked, ElementName=checkBoxAgree, Mode=OneWay}">
+        <StackPanel>
+            <TextBlock x:Name="ErrorPopupText" Text=""
+                            TextWrapping="Wrap" />
+        </StackPanel>
+    </ContentDialog>
+    
+    <ContentDialog x:Name="PressButtonPopup"
+                        VerticalAlignment="Stretch"
+                        Title="Connect to bridge"
+                        PrimaryButtonText="Pressed!"
+                        IsPrimaryButtonEnabled="{Binding IsChecked, ElementName=checkBoxAgree, Mode=OneWay}">
+        <StackPanel>
+            <TextBlock x:Name="PressButtonText" Text="Press the button on your bridge now."
+                            TextWrapping="Wrap" />
+            <Image Source="Assets\push-link.png" Height="100" Margin="0,10,0,0"></Image>
+        </StackPanel>
+    </ContentDialog>
+</Grid>

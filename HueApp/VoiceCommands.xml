@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="HueAppCommandSet_en-us">
+    <CommandPrefix>Hue</CommandPrefix>
+    <Example>Lights on, Lights off, Lights blue, etc</Example>
+
+    <Command Name="changeLightsState">
+      <Example>Turn the lights on</Example>
+      <ListenFor>[Turn] [the] lights {state}</ListenFor>
+      <Feedback>Trying to turn the lights {state} </Feedback>
+      <VoiceCommandService Target="LightControllerVoiceCommandService" />
+    </Command>
+
+    <Command Name="changeLightsColor">
+      <Example>Change the lights color</Example>
+      <ListenFor>Change [the] [lights] color</ListenFor>
+      <VoiceCommandService Target="LightControllerVoiceCommandService" />
+    </Command>
+
+    <Command Name="changeLightStateByName">
+      <Example>Turn desk light red</Example>
+      <ListenFor>Turn {name} {state}</ListenFor>
+      <Feedback>Trying to turn {name} {state} </Feedback>
+      <VoiceCommandService Target="LightControllerVoiceCommandService" />
+    </Command>
+    <!-- Contains on/off to start, but will also be dynamically expanded with the 
+      names of all known system colors by InitCortanaAsync in MainPage.xaml.cs. -->
+    <PhraseList Label="state">
+      <Item>On</Item>
+      <Item>Off</Item>
+    </PhraseList>
+    <!-- Dynamically populated with the names of all known lights by InitCortanaAsync in MainPage.xaml.cs. -->
+    <PhraseList Label="name" />
+  </CommandSet>
+</VoiceCommands>
