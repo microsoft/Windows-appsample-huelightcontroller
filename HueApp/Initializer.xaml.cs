@@ -46,7 +46,7 @@ namespace HueApp
     /// Handles inital loading of Hue resources (including the bridge and lights), and displaying
     /// an extended splash screen to the user while the app prepares.
     /// </summary>
-    internal partial class Initalizer 
+    internal partial class Initializer 
     {
         protected Rect rect;
         protected SplashScreen splash;
@@ -58,10 +58,10 @@ namespace HueApp
         private IEnumerable<Light> _lights;
 
         /// <summary>
-        /// Constructor for the initalizer. This displays an extended splash screen and progress
+        /// Constructor for the initializer. This displays an extended splash screen and progress
         /// ring while the app loads the bridge, lights, and Cortana. 
         /// </summary>
-        public Initalizer(SplashScreen splashscreen)
+        public Initializer(SplashScreen splashscreen)
         {
             InitializeComponent();
             Window.Current.Content = rootFrame;
@@ -69,13 +69,13 @@ namespace HueApp
             splash = splashscreen;
             rect = splash.ImageLocation;
             SetImage();
-            splash.Dismissed += Initalize;
+            splash.Dismissed += Initialize;
         }
 
         /// <summary>
         /// Prepares the app for use by finding the bridge and lights, and initalizing Cortana. 
         /// </summary>
-        private async void Initalize(SplashScreen sender, object args)
+        private async void Initialize(SplashScreen sender, object args)
         {
             await FindBridgeAsync();
             await FindLightsAsync();
@@ -321,7 +321,7 @@ namespace HueApp
     }
 
     /// <summary>
-    /// Container class for passing Hue bridge and lights from the Initalizer page to MainPage.
+    /// Container class for passing Hue bridge and lights from the initializer page to MainPage.
     /// </summary>
     internal class HuePayload
     {

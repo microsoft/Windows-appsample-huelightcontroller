@@ -43,12 +43,12 @@ If you’re just interested in code snippets for certain API and don’t want to
 * [HsbColor.cs](HueLibrary/HsbColor.cs#L25) converts standard aRGB colors (used in Universal Windows apps) to HSB (used by the Hue lighting system). 
 
 ### Extended splash screen: 
-* [Initalizer.xaml](HueApp/Initalizer.xaml#L21) contains the image and layout to use for the extended splash screen. 
-* [Initalizer.xaml.cs](HueApp/Initalizer.xaml.cs#L25) manages positioning the extended splash screen, loading all the relevant Hue resouces, and then dismissing the extended splash when finished.
+* [Initializer.xaml](HueApp/Initializer.xaml#L21) contains the image and layout to use for the extended splash screen. 
+* [Initializer.xaml.cs](HueApp/Initializer.xaml.cs#L25) manages positioning the extended splash screen, loading all the relevant Hue resouces, and then dismissing the extended splash when finished.
 
 ### Cortana: 
-* [VoiceCommands.xml](HueApp/VoiceCommands.xml) defines the structure of voice commands Cortana should recognize as Hue-related so that they can be routed to the HueLightController app. At first, VoiceCommands.xml only specifies the types of phrases Cortana is looking for - the actual words she accepts are added programatically by Initalizer.xaml.cs. For example, VoiceCommands.xml states Cortana is listening for a phrase like "Turn my lights [color]," while Initalizer.xaml.cs modifies VoiceCommands.xml to include the list of valid colors (red, blue, etc). 
-* [Initalizer.xaml.cs](HueApp/Initalizer.xaml.cs#L25) prepares Cortana so she's ready to process Hue commands in the background, even if HueLightController isn't running. This includes dynamically modifying VoiceCommands.xml with the list of valid lights and colors. 
+* [VoiceCommands.xml](HueApp/VoiceCommands.xml) defines the structure of voice commands Cortana should recognize as Hue-related so that they can be routed to the HueLightController app. At first, VoiceCommands.xml only specifies the types of phrases Cortana is looking for - the actual words she accepts are added programatically by Initializer.xaml.cs. For example, VoiceCommands.xml states Cortana is listening for a phrase like "Turn my lights [color]," while Initializer.xaml.cs modifies VoiceCommands.xml to include the list of valid colors (red, blue, etc). 
+* [Initializer.xaml.cs](HueApp/Initializer.xaml.cs#L25) prepares Cortana so she's ready to process Hue commands in the background, even if HueLightController isn't running. This includes dynamically modifying VoiceCommands.xml with the list of valid lights and colors. 
 * [Cortana.cs](HueBackground/Cortana.cs#L25) receives voice commands from Cortana in the background, processes the user's request (including requesting clarification from the user, if needed), and then sends the appropriate command to the Hue lights. 
 
 ### Bluetooth LE: 

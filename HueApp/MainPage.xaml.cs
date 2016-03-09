@@ -73,7 +73,7 @@ namespace HueApp
         }
 
         /// <summary>
-        /// Fires when the page is navigated to, which occurs after the Initalizer extended
+        /// Fires when the page is navigated to, which occurs after the extended
         /// splash screen has finished loading all Hue resources. 
         /// </summary>
         protected override async void OnNavigatedTo(NavigationEventArgs e)

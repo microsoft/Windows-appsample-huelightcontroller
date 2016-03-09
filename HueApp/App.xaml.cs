@@ -48,8 +48,8 @@ namespace HueApp
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-            var initalizer = new Initalizer(e.SplashScreen);
-            Window.Current.Content = initalizer;
+            var init = new Initializer(e.SplashScreen);
+            Window.Current.Content = init;
             Window.Current.Activate();
         }
     }
