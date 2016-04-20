@@ -2,6 +2,8 @@
 
 **HueLightController** is a Universal Windows Platform (UWP) app sample that explores integrating Windows features with intelligent home automation. Specifically, it shows how you can use Cortana and Bluetooth Low Energy (Bluetooth LE) to create an interactive experience with the [Phillips Hue Lights](http://meethue.com) (a Wi-Fi enabled lighting system). 
 
+[![Using Cortana and Bluetooth LE with Hue Lights Video](Screenshots/Using Cortana and Bluetooth LE with Hue Lights Video.png)](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Cortana-and-Bluetooth-LE-with-Hue-Lights "Channel 9 One Dev Minute video - Click to Watch")
+
 With Cortana integration, users are able to naturally interact with the lights through speech. They can turn the lights off, change their color, or even engage with Cortana in a back-and-forth conversation to adjust a specific light or change all the lights at once. 
 
 Additionally, through Bluetooth LE, the app supports a proximity scenario where the lights are automatically turned on/off depending on a user's device relative to a Bluetooth LE beacon. 
