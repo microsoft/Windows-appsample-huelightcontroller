@@ -231,7 +231,15 @@ namespace HueApp
             {
                 xml.Save(stream);
             }
-            await VoiceCommandDefinitionManager.InstallCommandDefinitionsFromStorageFileAsync(dynamicFile);
+            try
+            {
+                await VoiceCommandDefinitionManager.InstallCommandDefinitionsFromStorageFileAsync(dynamicFile);
+            }
+            catch (FileNotFoundException)
+            {
+                // Do nothing. This is a workaround for a spurious FileNotFoundException that 
+                // is thrown even though dynamicFile exists on disk. 
+            }
         }
 
         /// <summary>
