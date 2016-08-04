@@ -24,12 +24,12 @@
       <VoiceCommandService Target="LightControllerVoiceCommandService" />
     </Command>
     <!-- Contains on/off to start, but will also be dynamically expanded with the 
-      names of all known system colors by InitCortanaAsync in MainPage.xaml.cs. -->
+      names of all known system colors by InitializeCortanaAsync in Initializer.xaml.cs. -->
     <PhraseList Label="state">
       <Item>On</Item>
       <Item>Off</Item>
     </PhraseList>
-    <!-- Dynamically populated with the names of all known lights by InitCortanaAsync in MainPage.xaml.cs. -->
+    <!-- Dynamically populated with the names of all known lights by InitializeCortanaAsync in Initializer.xaml.cs. -->
     <PhraseList Label="name" />
   </CommandSet>
 </VoiceCommands>

@@ -56,7 +56,7 @@ namespace BackgroundTasks
             {
                 _deferral = taskInstance.GetDeferral();
                 taskInstance.Canceled += (s, e) => _deferral.Complete();
-                if (true != await InitalizeAsync(triggerDetails))
+                if (true != await InitializeAsync(triggerDetails))
                 {
                     return;
                 }
@@ -175,7 +175,7 @@ namespace BackgroundTasks
         /// <summary>
         /// Helper method for initalizing the voice service, bridge, and lights. Returns if successful. 
         /// </summary>
-        private async Task<bool> InitalizeAsync(AppServiceTriggerDetails triggerDetails)
+        private async Task<bool> InitializeAsync(AppServiceTriggerDetails triggerDetails)
         {
             _voiceServiceConnection = 
                 VoiceCommandServiceConnection.FromAppServiceTriggerDetails(triggerDetails);

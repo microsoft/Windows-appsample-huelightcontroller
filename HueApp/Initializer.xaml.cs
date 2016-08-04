@@ -79,7 +79,7 @@ namespace HueApp
         {
             await FindBridgeAsync();
             await FindLightsAsync();
-            await InitalizeCortanaAsync();
+            await InitializeCortanaAsync();
             SaveBridgeToCache();
             await rootFrame.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
@@ -196,7 +196,7 @@ namespace HueApp
         /// <summary>
         /// Prepares Cortana for background use. 
         /// </summary>
-        private async Task InitalizeCortanaAsync()
+        private async Task InitializeCortanaAsync()
         {
             // You can't write to application files by default, so we need to create a 
             // secondary VCD file to dynamically write Cortana commands to.
