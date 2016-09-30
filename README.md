@@ -1,4 +1,8 @@
-﻿# Hue Lights sample
+﻿<!---
+  category: DevicesSensorsAndPower SpeechAndCortana
+-->
+
+# Hue Lights sample
 
 **HueLightController** is a Universal Windows Platform (UWP) app sample that explores integrating Windows features with intelligent home automation. Specifically, it shows how you can use Cortana and Bluetooth Low Energy (Bluetooth LE) to create an interactive experience with the [Phillips Hue Lights](http://meethue.com) (a Wi-Fi enabled lighting system). 
 
