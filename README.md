@@ -4,7 +4,10 @@
 
 # Hue Lights sample
 
-A mini-app that explores integrating Windows features with intelligent home automation. Specifically, it shows how you can use Cortana and Bluetooth Low Energy (Bluetooth LE) to create an interactive experience with the [Phillips Hue Lights](http://meethue.com) (a Wi-Fi enabled lighting system). 
+A mini-app that explores integrating Windows features with intelligent home automation. Specifically, it shows how you can use Cortana and 
+Bluetooth Low Energy (Bluetooth LE) to create an interactive experience with the [Phillips Hue Lights](http://meethue.com) (a Wi-Fi enabled lighting system). 
+
+This sample runs on the Universal Windows Platform (UWP). 
 
 [![Using Cortana and Bluetooth LE with Hue Lights Video](Screenshots/Using Cortana and Bluetooth LE with Hue Lights Video.png)](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Cortana-and-Bluetooth-LE-with-Hue-Lights "Channel 9 One Dev Minute video - Click to Watch")
 
