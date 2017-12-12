@@ -159,7 +159,7 @@ csx/
 efc/
 rfc/
 
-# Windows Store app package directory
+# Microsoft Store app package directory
 AppPackages/
 
 # Visual Studio cache files
