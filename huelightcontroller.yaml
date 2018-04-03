@@ -11,3 +11,4 @@ Bluetooth Low Energy (Bluetooth LE) to create an interactive experience with the
   - xaml
   technologies:
   - windows
+  vssolution: HueLightController.sln
