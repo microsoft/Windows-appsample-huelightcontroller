@@ -5,7 +5,7 @@ sample:
 Bluetooth Low Energy (Bluetooth LE) to create an interactive experience with the Phillips Hue Lights (a Wi-Fi enabled lighting system).
   image: Screenshots/HueApp.png
   generateZip: true
-  author: karler
+  author: JoshuaPartlow
   languages:
   - csharp
   technologies:
