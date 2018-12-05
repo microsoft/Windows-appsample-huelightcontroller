@@ -1,8 +1,4 @@
-﻿<!---
-  category: DevicesSensorsAndPower SpeechAndCortana
--->
-
----
+﻿---
 topic: sample
 languages:
 - csharp
