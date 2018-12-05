@@ -2,6 +2,17 @@
   category: DevicesSensorsAndPower SpeechAndCortana
 -->
 
+---
+topic: sample
+languages:
+- csharp
+products:
+- windows
+- uwp
+statusNotificationTargets:
+- codefirst
+---
+
 # Hue Lights sample
 
 A mini-app that explores integrating Windows features with intelligent home automation. Specifically, it shows how you can use Cortana and 
