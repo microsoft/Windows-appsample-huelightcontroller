@@ -87,3 +87,5 @@ If you’re just interested in code snippets for certain API and don’t want to
 [Bluetooth advertisement sample](http://go.microsoft.com/fwlink/p/?LinkId=619990)  
 [Cortana voice command sample](http://go.microsoft.com/fwlink/p/?LinkId=619899)  
 [Philips Hue Developer Program](http://www.developers.meethue.com/)
+
+
