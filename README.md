@@ -7,6 +7,7 @@ products:
 - windows-uwp
 statusNotificationTargets:
 - codefirst@microsoft.com
+description: "A mini-app that explores integrating Windows features with intelligent home automation."
 ---
 
 <!---
