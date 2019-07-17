@@ -7,7 +7,6 @@ products:
 - windows-uwp
 statusNotificationTargets:
 - codefirst@microsoft.com
-description: "A mini-app that explores integrating Windows features with intelligent home automation."
 ---
 
 <!---
@@ -16,10 +15,9 @@ description: "A mini-app that explores integrating Windows features with intelli
 
 # Hue Lights sample
 
-> Note - This sample is targeted and tested for Windows 10, version 1903 (10.0; Build 18362), and Visual Studio 2019. If you prefer, you can use project properties to retarget the project(s) to Windows 10, version 1809 (10.0; Build 17763), and/or open the sample with Visual Studio 2017.
+A mini-app that explores integrating Windows features with intelligent home automation. Specifically, it shows how you can use Cortana and Bluetooth Low Energy (Bluetooth LE) to create an interactive experience with the [Phillips Hue Lights](http://meethue.com) (a Wi-Fi enabled lighting system).
 
-A mini-app that explores integrating Windows features with intelligent home automation. Specifically, it shows how you can use Cortana and 
-Bluetooth Low Energy (Bluetooth LE) to create an interactive experience with the [Phillips Hue Lights](http://meethue.com) (a Wi-Fi enabled lighting system). 
+> Note - This sample is targeted and tested for Windows 10, version 1903 (10.0; Build 18362), and Visual Studio 2019. If you prefer, you can use project properties to retarget the project(s) to Windows 10, version 1809 (10.0; Build 17763), and/or open the sample with Visual Studio 2017.
 
 This sample runs on the Universal Windows Platform (UWP). 
 
