@@ -24,4 +24,7 @@ THE SOFTWARE.
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:HueApp"
     RequestedTheme="Light">
+    <Application.Resources>
+        <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+    </Application.Resources>
 </Application>
