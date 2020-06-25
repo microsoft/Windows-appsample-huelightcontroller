@@ -66,7 +66,7 @@ namespace HueLibrary
             {
                 try
                 {
-                    string response = await client.GetStringAsync(new Uri("https://www.meethue.com/api/nupnp"));
+                    string response = await client.GetStringAsync(new Uri("https://discovery.meethue.com/"));
                     if (response == "[]")
                     {
                         return null;
