@@ -30,6 +30,16 @@ Additionally, through Bluetooth LE, the app supports a proximity scenario where 
 ![HueApp connect screen](Screenshots/Connecting.png)
 ![HueApp light screen](Screenshots/HueApp.png)
 
+### June 2020 update
+
+This update includes:
+
+* Update to WinUI 2.4 
+	* Add Microsoft.UI.Xaml NuGet package reference
+	* Update <Application.Resources> in App.xaml 
+* Refactoring for the following WinUI 2.4 controls:
+   * [ProgressRing](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/progress-controls)
+
 ## Features
 
 The HueLightController app demonstrates:
